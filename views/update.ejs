@@ -1,0 +1,9 @@
+<h1>Update Item</h1>
+
+<form action="/updateItem/<%= item._id %>" method="POST">
+    <input type="text" name="todo" value="<%= item.todo %>">
+    <button> Add Task </button>
+</form>
+<form action="/" method="GET">
+    <button>Back</button>
+</form>

@@ -1,0 +1,20 @@
+<h1>TODO-List</h1>
+
+<form action="/" method="POST">
+  <input type="text" name="todo" placeholder="add new task">
+  <button> Add Task </button>
+</form>
+<h2>All tasks</h2>
+<ul>
+  <% for(var i=0; i < items.length; i++) { %>
+    <li>
+      <%= items[i].todo %>
+        <form action="/deleteItem/<%= items[i]._id %>" method="POST">
+          <button>Delete</button>
+        </form>
+        <form action="/updateItem/<%= items[i]._id %>" method="get">
+          <button>Update</button>
+        </form>
+    </li>
+    <% } %>
+</ul>
